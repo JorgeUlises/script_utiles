@@ -1,0 +1,1 @@
+decode(campo,'M','ES HOMBRE','F','ES MUJER')
