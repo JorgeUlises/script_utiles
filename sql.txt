@@ -1,1 +1,1 @@
-DECODE(BEN_TIPO_IDEN, 1,'CC', 2, 'TI', 3, 'CE', 4, 'OTROS'),
+decode(tvi_cod,1,'PL',6,'PL',0,'SD','VE')
