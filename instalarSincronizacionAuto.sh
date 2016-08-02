@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ $USER != "root" ]; then
   echo "El comando debe ser ejecutado como ROOT"
   exit

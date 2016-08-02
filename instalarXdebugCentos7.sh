@@ -1,3 +1,4 @@
+#!/bin/bash
 wget http://xdebug.org/files/xdebug-2.4.0.tgz
 tar -xvzf xdebug-*
 cd xdebug-*
