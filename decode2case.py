@@ -132,7 +132,7 @@ def convLENGTH(line, caracteres):
         sql += fin
     print sql
 
-fname = "sql.txt"
+fname = "sql_decode.sql"
 with open(fname) as f:
     content = f.read().splitlines()
 
