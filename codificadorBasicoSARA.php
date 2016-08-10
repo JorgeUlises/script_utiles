@@ -113,7 +113,7 @@ function non_block_read($fd, &$data) {
 }
 
 $semilla = isset($argv[1])?$argv[1]:'';
-if($semilla=='-h'||$semilla=='--help'){
+if($semilla=='-h'||$semilla=='--help'||$semilla==''){
 	echo 'php '.$argv[0].' <semilla> <codificar o decodificar>'."\n";
 	exit();
 }
