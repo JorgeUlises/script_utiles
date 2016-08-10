@@ -125,7 +125,7 @@ echo 'Inserte lineas a '.$accion.':'.PHP_EOL;
 
 $linea = '';
 while(1) {
-    $x = '';
+    $char = '';
     if(non_block_read(STDIN, $char)) {
 	$linea .= $char;
     } else {
