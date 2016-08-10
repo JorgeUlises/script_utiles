@@ -121,7 +121,7 @@ $enc = new Encriptador($semilla);
 
 $accion = isset($argv[2])?(strtoupper($argv[2][0])=='C')?'codificar':'decodificar':'codificar';
 
-echo 'Inserte lineas a codificar:'.PHP_EOL;
+echo 'Inserte lineas a '.$accion.':'.PHP_EOL;
 
 $linea = '';
 while(1) {
