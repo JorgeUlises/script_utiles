@@ -131,12 +131,11 @@ while(1) {
     } else {
 	if($linea != ''){
 		$lineas = explode("\n", $linea);
-		if(end($lineas)==''){
-			array_pop($lineas);//Elimina el último que siempre es un salto de linea
-		}
 		echo PHP_EOL;
 		foreach ($lineas as $l){
-			echo $enc->{$accion}($l).PHP_EOL;
+			if($l!=''){
+				echo $enc->{$accion}($l).PHP_EOL;
+			}
 		}
 		echo PHP_EOL;
 		$linea = '';
