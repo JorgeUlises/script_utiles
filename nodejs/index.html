@@ -1,0 +1,21 @@
+<script>
+    // Part 3 - Creating and setting up the XHR object
+    var xhr = new XMLHttpRequest() //elemento de js no en todos esta
+
+    xhr.open('GET', 'http://localhost:9999/?opcion=calcular&limite=2,&Pesos=3,1,2,3,&Valores=4,5,6,')
+
+    // Part 4 - Defining callbacks that XHR object will call for us
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            console.log(xhr.response)
+            document.body.innerHTML = xhr.response
+        }
+    }
+
+    xhr.onerror = function() {
+        console.log('Unable to load URL')
+    }
+
+    // Part 5 - Starting the process
+    xhr.send()
+</script>
