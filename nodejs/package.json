@@ -1,0 +1,20 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webservice_porcomputador.js",
+  "dependencies": {
+    "nodejs-dom": "^0.0.2",
+    "request": "^2.75.0",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {
+    "cheerio": "^0.22.0",
+    "require": "^2.4.20"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
