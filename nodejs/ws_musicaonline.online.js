@@ -24,11 +24,11 @@ var download_file_wget = function(file_url, file_name, DOWNLOAD_DIR) {
   if (file_name_url.toLowerCase().indexOf('.msa') > -1) {
     extension = 'msa'
   }
-  var wget = 'wget "' + file_url + '" -O "' + DOWNLOAD_DIR + '/' + file_name + '.' + extension + '"'
-  console.log('\n' + wget)
+  var command = 'mkdir -p "' + DOWNLOAD_DIR + '"; wget "' + file_url + '" -O "' + DOWNLOAD_DIR + '/' + file_name + '.' + extension + '"'
+  console.log('\n' + command)
     // excute wget using child_process' exec function
 
-  var child = exec(wget, function(err, stdout, stderr) {
+  var child = exec(command, function(err, stdout, stderr) {
     if (err) {
       throw err
     } else {
@@ -68,15 +68,10 @@ http.createServer(function(req, res) {
       }))
 
       var DOWNLOAD_DIR = 'songs'
-      var child = exec('mkdir -p ' + DOWNLOAD_DIR, function(err, stdout, stderr) {
-        if (err) {
-          throw err
-        } else {
-          for (var i = 0; i < playlist.length; i++) {
-            download_file_wget(playlist[i].mp3, playlist[i].title, DOWNLOAD_DIR)
-          }
-        }
-      })
+      for (var i = 0; i < playlist.length; i++) {
+        var DOWNLOAD_DIR_ESPECIFIC = DOWNLOAD_DIR + '/' + playlist[i].genero + '/' + playlist[i].artista
+        download_file_wget(playlist[i].mp3, playlist[i].title, DOWNLOAD_DIR_ESPECIFIC)
+      }
 
     } else {
       console.log('Error :', error)
