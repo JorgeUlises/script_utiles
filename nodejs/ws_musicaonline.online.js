@@ -1,9 +1,7 @@
 var request = require('request')
-var cheerio = require('cheerio')
 var http = require('http')
 var url = require('url')
 var stringify = require('json-stringify')
-var fs = require('fs');
 var exec = require('child_process').exec;
 
 function getObjectStringList(htmlSource) {
