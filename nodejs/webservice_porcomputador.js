@@ -19,7 +19,7 @@ http.createServer(function(req, res) {
 
   var url_parts = url.parse(req.url, true)
   var query = url_parts.query
-  console.log(query); //{Object}
+  console.log(query) //{Object}
   if (query.opcion === 'calcular') {
     var postData = {
       'limite': query.limite, //Peso límite
