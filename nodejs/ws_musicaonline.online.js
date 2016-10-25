@@ -30,7 +30,8 @@ var download_file_wget = function(file_url, file_name, DOWNLOAD_DIR) {
 
   var child = exec(command, function(err, stdout, stderr) {
     if (err) {
-      throw err
+      //throw err
+      console.log("Error wget:", err)
     } else {
       console.log(file_name + ' downloaded to ' + DOWNLOAD_DIR)
     }
