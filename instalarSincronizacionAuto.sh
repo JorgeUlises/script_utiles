@@ -34,7 +34,7 @@ git pull origin master
 EOF
 chmod +x $archivo
 
-archivo=/etc/cron.d/pullestudiantes.cron
+archivo=/etc/cron.d/pullestudiantes
 echo "Instalando $archivo"
 cat <<'EOF' > $archivo
 #00 * * * * root /usr/bin/pullestudiantes.sh 2>&1 | tr '\r\n' ' ' | (cat; echo)  >> /var/log/pullestudiantes.log
