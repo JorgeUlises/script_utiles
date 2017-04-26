@@ -149,7 +149,7 @@ if ($accion == '-h' || $accion == '--help' || $accion == '') {
     exit();
 }
 
-$accion = (strtoupper($accion) == 'C') ? 'codificar' : 'decodificar';
+$accion = (strtoupper($accion[0]) == 'C') ? 'codificar' : 'decodificar';
 
 $version = isset($argv[2]) ? (strtoupper($argv[2][0]) == 'N') ? 'nuevo' : 'viejo' : 'nuevo';
 
